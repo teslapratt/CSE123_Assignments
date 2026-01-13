@@ -1,3 +1,12 @@
+// Tesla Pratt
+// 01/12/2026
+// CSE 123 
+// C0: Search Engine
+// TA: Elden Martial
+// This class maps content to the location where the content can be found.
+// In our case, we create a bank of a bunch of words and indicate which books
+// are associated with that specific word. 
+
 import java.util.*;
 
 public class InvertedIndex {
@@ -17,7 +26,12 @@ public class InvertedIndex {
         System.out.println(result);
     }
 
-    // TODO: Write and document your createIndex method here
+    //B: This method takes a list of media and creates a mapping from each word found
+    //   within the media to the specific books/media that contain that word.
+    //E: N/A
+    //R: Returns a map that allows us to easily access all the media that contain a given word.
+    //P: docs: a list of all the media we want to review and organize into groups by certain 
+    //         contained words within the media.
     public static Map<String, Set<Media>> createIndex(List<Media> docs) {
         //get content from each book in the list of media. check if the word exists in the map,
         //if it does exist in the map, add the book as a value for the word which is the key
@@ -32,7 +46,7 @@ public class InvertedIndex {
 
             for(int j=0; j<currLine.size(); j++){
                 String word = currLine.get(j).toLowerCase();
-                
+
                 if(!result.containsKey(word)){
                     Set<Media> currSet = new HashSet<Media>();
                     currSet.add(currMedia);

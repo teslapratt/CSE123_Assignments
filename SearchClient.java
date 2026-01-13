@@ -1,10 +1,14 @@
-import java.io.*;
-import java.util.*;
-// Name: TODO
-// Date: TODO
-
+// Tesla Pratt
+// 01/12/2026
+// CSE 123 
+// C0: Search Engine
+// TA: Elden Martial
 // This class allows users to find and rate books within BOOK_DIRECTORY
 // containing certain terms
+
+import java.io.*;
+import java.util.*;
+
 public class SearchClient {
     public static final String BOOK_DIRECTORY = "./books";
     private static final Random RAND = new Random();
@@ -41,9 +45,8 @@ public class SearchClient {
 
     // TODO: Paste createIndex implementation & comment
     public static Map<String, Set<Media>> createIndex(List<Media> docs) {
-                //get content from each book in the list of media. check if the word exists in the map,
+        //get content from each book in the list of media. check if the word exists in the map,
         //if it does exist in the map, add the book as a value for the word which is the key
-
         Map<String, Set<Media>> result = new TreeMap<>();
 
         //iterate through each book in the list
