@@ -56,7 +56,7 @@ public class Testing {
 
         book.addRating(5);
         // TODO: Test that getAvgRating returns 4.5
-        assertEquals(5, book.getAverageRating());
+        assertEquals(4.5, book.getAverageRating());
         
     }
 
