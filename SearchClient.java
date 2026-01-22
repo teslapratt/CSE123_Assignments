@@ -46,7 +46,8 @@ public class SearchClient {
     //B: This method takes a list of media and creates a mapping from each word found
     //   within the media to the specific books/media that contain that word.
     //E: N/A
-    //R: Returns a map that allows us to easily access all the media that contain a given word.
+    //R: Returns sorted information that allows us to easily access all the media that 
+    //   contain a given word.
     //P: docs: a list of all the media we want to review and organize into groups by certain 
     //         contained words within the media.
     public static Map<String, Set<Media>> createIndex(List<Media> docs) {
@@ -77,11 +78,11 @@ public class SearchClient {
     }
 
     //B: Allows users to input a search query that will run through all the media
-    //   in a given map, and return a set of all the media that the search is 
+    //   in a given group of data, and return a set of all the media that the search is
     //   is relevent to. 
     //E: N/A
     //R: Returns a set of media that the search is applicable to
-    //P: index - a map that contains media sorted into sets based on what words
+    //P: index - sorted information that contains media sorted into sets based on what words
     //           they contain
     //   query - a string inputted by the user that indicates what they want to search
     //           the index mapping for

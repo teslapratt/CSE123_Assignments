@@ -21,6 +21,10 @@ public class Book implements Media, Comparable<Book>{
 
     private List<String> bookContent;
 
+    //B: Allows user to create a book and assign it a title, authors, and content
+    //E: N/A
+    //R: N/A
+    //P: User needs to enter a title, author/authors, and book content
     public Book(String title, List<String> authors, Scanner content){
         this.title = title;
         this.ratings = new ArrayList<>();
