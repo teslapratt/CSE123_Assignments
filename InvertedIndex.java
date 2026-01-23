@@ -27,7 +27,8 @@ public class InvertedIndex {
     }
 
     //B: This method takes a list of media and creates a mapping from each word found
-    //   within the media to the specific books/media that contain that word.
+    //   within the media to the specific books/media that contain that word. The word
+    //   searching is case insensitive!
     //E: N/A
     //R: Returns information in a format that allows us to easily access all the media 
     //   that contain a given word.

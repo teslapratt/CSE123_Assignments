@@ -91,14 +91,16 @@ public class Book implements Media, Comparable<Book>{
         return new ArrayList<String>(bookContent);
     }
 
-    //B: Converts all information about the book into an easy to read format
+    //B: Converts all information about the book into an easy to read format. If 
+    //   there are no ratings, the toString won't print anything about the rating score.
     //E: N/A
     //R: Returns string containing book's title, author/authors, average rating,
     //   and number of ratings.
     //P: N/A
     public String toString(){
         if(!ratings.isEmpty()){
-            return title + " by " + authors + ": " + (double)Math.round(getAverageRating()*100)/100 + " (" + getNumRatings() + " ratings)";
+            return title + " by " + authors + ": " + (double)Math.round(getAverageRating()*100)
+            /100 + " (" + getNumRatings() + " ratings)";
         } else{
             return title + " by " + authors;
         }
