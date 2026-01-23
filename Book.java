@@ -16,9 +16,6 @@ public class Book implements Media, Comparable<Book>{
     private String title;
     private List<String> authors;
     private List<Integer> ratings;
-
-    private Scanner content;
-
     private List<String> bookContent;
 
     //B: Allows user to create a book and assign it a title, authors, and content
@@ -30,7 +27,10 @@ public class Book implements Media, Comparable<Book>{
         this.ratings = new ArrayList<>();
         this.bookContent = new ArrayList<>();
         this.authors = new ArrayList<>(authors);
-        this.content = content;
+
+        while(content.hasNext()){
+            bookContent.add(content.next());
+        }
     }
 
     //B: Allows user to access the book's title
@@ -52,7 +52,7 @@ public class Book implements Media, Comparable<Book>{
     //B: Allows user to add an integer score "rating" to a book
     //E: N/A
     //R: N/A
-    //P: N/A
+    //P: Integer input that allows user to add a rating for the book
     public void addRating(int score){
         ratings.add(score);
     }
@@ -88,10 +88,6 @@ public class Book implements Media, Comparable<Book>{
     //R: Returns the book content
     //P: N/A
     public List<String> getContent(){
-        while(content.hasNext()){
-            bookContent.add(content.next());
-        }
-
         return new ArrayList<String>(bookContent);
     }
 
